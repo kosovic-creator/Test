@@ -30,8 +30,8 @@ export default function Page({ params }: PageProps) {
         <form className="bg-white shadow-md rounded-lg p-6 max-w-sm w-full">
           <p>Korisnik sa ID {id} biće uklonjen.</p>
           {/* <button onClick={handleDelete}>Porvrdi Brisanje</button> */}
-          <Link href="/admin/korisnici" className="text-red-800 p-8">Vrati se</Link>
-          <Link href="/admin/korisnici" className="text-blue-800 underline">
+          <Link href="/test" className="text-red-800 p-8">Vrati se</Link>
+          <Link href="/test" className="text-blue-800 underline">
             <button onClick={handleDelete}>Porvrdi Brisanje</button>
           </Link>
         </form>
