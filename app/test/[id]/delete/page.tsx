@@ -1,4 +1,5 @@
-
+'use client';
+import React from 'react';
 import { deleteById } from '@/app/test/action/actions';
 import Link from 'next/link';
 
@@ -8,15 +9,19 @@ interface PageProps {
   params: Promise<{ id: string }>;
 }
 
-export default async function Page({ params }: PageProps) {
+export default function Page({ params }: PageProps) {
+  const [id, setId] = React.useState<string | null>(null);
 
-    const { id } = await params;
+  React.useEffect(() => {
+    params.then(({ id }) => setId(id));
+  }, [params]);
 
-    const handleDelete = async () => {
+  const handleDelete = async () => {
+    if (id) {
       await deleteById(parseInt(id));
-     // ili router.push("/login")
-    };
-
+      // ili router.push("/login")
+    }
+  };
 
   return (
     <>
