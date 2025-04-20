@@ -35,8 +35,8 @@ return (
       </Link>
     </div> */}
     {/* <table className="table-auto border-collapse border border-gray-300 w-full max-w-4xl"> */}
-    <Link href="/test/new" className=" text-blue-700 text-underline font-bold py-2 px-4 rounded mb-4">
-        Create New Test
+    <Link href="/test/new" className=" text-black text-underline font-bold py-2 px-4 rounded mb-4">
+        Dodaj
       </Link>
     <table className="table-auto border-collapse border border-gray-300 w-full max-w-4xl">
       <thead>
