@@ -84,9 +84,9 @@ export async function deleteById(
   export async function getTestById(id: number) {
   try {
     return await db.test.findUnique({
-    
+
         where: { id: Number(id) }, // Replace with the actual ID you want to fetch
-      }) as { id: number; name: string } | null;;
+      }) as { id: number; name: string; price: number } | null;
 
 
   }
