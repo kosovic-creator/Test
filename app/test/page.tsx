@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { getAllTests } from '@/action/actions';
+import { getAllTests, deleteById } from '@/action/actions';
 import Link from 'next/link';
 
 const TestList: React.FC = () => {
@@ -17,10 +17,17 @@ const TestList: React.FC = () => {
       }
     };
 
-
-
     fetchTests();
   }, []);
+
+  const handleDelete = async (id: number) => {
+    const response = await deleteById(id);
+    if (!response?.message) {
+      window.location.reload(); // Reload the page on the client side
+    } else {
+      alert(response.message || 'Failed to delete the test');
+    }
+  };
 
   if (error) {
     return <div>{error}</div>;
@@ -56,6 +63,7 @@ return (
             <td>
               <Link className='text-emerald-600' href={`/test/${test.id}/izmjeni`}>Prikaži</Link>
               <Link className='text-amber-700' href={`/test/${test.id}/delete`}>Ukloni</Link>
+              <button onClick={() => handleDelete(test.id)} className='text-red-600'>Delete</button>
             </td>
           </tr>
         ))}

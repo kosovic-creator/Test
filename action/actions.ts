@@ -75,7 +75,7 @@ export async function deleteById(
     };
 
   }
-  window.location.reload();
+ // window.location.reload();
   // pages/foods/index.js
 
 }
