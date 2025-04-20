@@ -75,15 +75,18 @@ export async function deleteById(
     };
   }
 
+  // pages/foods/index.js
 
+}
 
+const getServerSideProps = async () => {
+  const foods = await db.test.findMany();
+  return {
+    props: { foods },
+  };
+};
 
-
-
-
-
-
-  }
+export default getServerSideProps;
 
   export async function getTestById(id: number) {
   try {
