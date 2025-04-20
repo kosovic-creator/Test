@@ -73,8 +73,9 @@ export async function deleteById(
     return {
       message: "Nepoznata greška!",
     };
-  }
 
+  }
+  window.location.reload();
   // pages/foods/index.js
 
 }
