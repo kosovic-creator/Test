@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "builds": "next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build": "prisma generate && next build"
+    "vercel-build": "prisma generate && prisma migrate deploy && next build",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
+    "@prisma/adapter-neon": "^6.6.0",
     "@prisma/client": "^6.6.0",
     "@radix-ui/react-toast": "^1.2.7",
     "bcryptjs": "^2.4.3",
