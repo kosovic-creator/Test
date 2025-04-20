@@ -67,7 +67,7 @@ export default async function Page() {
 
   return (
 
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <table className="flex flex-col items-center justify-center min-h-screen">
       <h1 className="text-3xl font-bold mb-6">Test</h1>
       <Link className='text-emerald-900' href="/test/new">Dodaj</Link>
       {foods.map(food => (
@@ -82,6 +82,6 @@ export default async function Page() {
 
         ))}
       </ul>
-    </div>
+    </table>
   );
 }
