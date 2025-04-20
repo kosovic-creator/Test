@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { createTestAction } from  '@/action/actions';
 import { redirect } from 'next/navigation';
+import { Button } from '@/components/ui/button';
 
 const TestForm: React.FC = () => {
   const [name, setName] = useState('');
@@ -49,9 +50,9 @@ const TestForm: React.FC = () => {
 
           />
         </div>
-        <button type="submit" className="bg-blue-500 text-white font-bold py-2 px-4 rounded">
+        <Button type="submit" className="bg-black text-white font-bold py-2 ">
           Create Test
-        </button>
+        </Button>
         {message && <p className="text-green-500 mt-4">{message}</p>}
       </form>
 
