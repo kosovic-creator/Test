@@ -19,7 +19,7 @@ export default function Page({ params }: PageProps) {
   const handleDelete = async () => {
     if (id) {
       await deleteById(parseInt(id));
-      // ili router.push("/login")
+    
     }
   };
 

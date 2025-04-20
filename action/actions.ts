@@ -79,20 +79,16 @@ export async function deleteById(
 
 }
 
-const getServerSideProps = async () => {
-  const foods = await db.test.findMany();
-  return {
-    props: { foods },
-  };
-};
 
-export default getServerSideProps;
 
   export async function getTestById(id: number) {
   try {
     return await db.test.findUnique({
-      where: { id: typeof id === "string" ? Number(id) : id },
-    });
+    
+        where: { id: Number(id) }, // Replace with the actual ID you want to fetch
+      }) as { id: number; name: string } | null;;
+
+
   }
   catch (error) {
     console.error("Error fetching test by ID:", error);
