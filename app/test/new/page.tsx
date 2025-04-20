@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { createTestAction } from  '@/app/test/action/actions';
+import { createTestAction } from  '@/action/actions';
 import { redirect } from 'next/navigation';
 
 const TestForm: React.FC = () => {

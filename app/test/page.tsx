@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { getAllTests } from '@/app/test/action/actions';
+import { getAllTests } from '@/action/actions';
 import Link from 'next/link';
 
 const TestList: React.FC = () => {

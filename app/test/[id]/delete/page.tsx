@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { deleteById } from '@/app/test/action/actions';
+import { deleteById } from '@/action/actions';
 import Link from 'next/link';
 
 export const fetchCache = 'force-no-store';
